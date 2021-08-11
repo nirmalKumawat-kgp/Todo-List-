@@ -4,6 +4,7 @@ const addButtonElement = document.getElementById("addButton");
 const listGroupElement = document.getElementById("listGroup");
 const saveButtonElement = document.getElementById("saveButton")
 
+let todoList = getTodoList();
 
 function getTodoList(){
     let stringifiedTodoList = localStorage.getItem("todoList");
@@ -15,7 +16,7 @@ function getTodoList(){
         return parsedTodoList;
     }
 } 
-let todoList = getTodoList();
+
 
 saveButtonElement.onclick = function(){
     localStorage.setItem("todoList",JSON.stringify(todoList));
