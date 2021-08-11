@@ -88,9 +88,7 @@ todoItemElement.appendChild(deleteIconContainerElement);
 
 let deleteIconElement = document.createElement("i");
 deleteIconElement.addEventListener('click', function(){
-
-    let canDelete = confirm("Do You want to delete this task?");
-    if(canDelete === true){
+    
         let todoItemElement = document.getElementById(todoId);
     listGroupElement.removeChild(todoItemElement);
     
@@ -104,7 +102,7 @@ deleteIconElement.addEventListener('click', function(){
     });
     todoList.splice(todoList[index],1);
     console.log(todoList);
-    };
+    
     
 });
 deleteIconElement.classList.add("bi","bi-trash");
