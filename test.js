@@ -11,7 +11,7 @@ function getTodoList(){
     let parsedTodoList = JSON.parse(stringifiedTodoList);
     console.log(parsedTodoList);
     if(parsedTodoList == null){
-        todoList = [];
+        return [];
     }else {
         return parsedTodoList;
     }
